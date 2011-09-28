@@ -9,29 +9,17 @@ import java.io.IOException;
 
 public class ConsoleClient {
 	public void start() throws IOException {
-		System.out.println("Print some commands, and I do smth.\nTo quit - write \"q\"");
+		System.out.println("Print some commands, and I do smth.\nTo quit - write \"quit\"");
 		CommandExecutor executor = new LocalCommandExecutor();
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		try {
 			while (true) {
 				String curCommandStr = reader.readLine();
-				if (curCommandStr.equals("q"))
+				String executorAnswer = executor.execute(curCommandStr);
+				System.out.println(executorAnswer);
+				if (executorAnswer.equals("Bye!"))
 					break;
-				if (curCommandStr.trim().equals(""))
-					continue;
-
-				try {
-					Command curCommand = Command.fromString(curCommandStr);
-					System.out.println(executor.execute(curCommand));
-
-				} catch (UnknownCommandException e) {
-					System.out.println("Unknown command! Sorry...");
-
-				} catch (CommandExecutionException e) {
-					System.out.println("Problem with command execution.");
-				}
-
 			}
 
 		} catch (IOException e) {

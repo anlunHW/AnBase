@@ -62,25 +62,34 @@
       <file leaf-file-name="LocalCommandExecutor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/anBase/LocalCommandExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="92" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+            <state line="7" column="4" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashStorage.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DistributedBaseCommandExecutor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/anBase/DistributedBaseCommandExecutor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="42" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashStorage.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/anBase/HashStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="13" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Storage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/anBase/Storage.java">
+      <file leaf-file-name="CommandExecutor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/anBase/CommandExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="26" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,27 +98,16 @@
       <file leaf-file-name="ConsoleClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/anBase/ConsoleClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="65" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+            <state line="37" column="1" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Server.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/anBase/httpServer/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="1" selection-start="856" selection-end="856" vertical-scroll-proportion="0.8125">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/anBase/CommandParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="1" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+            <state line="16" column="13" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,7 +116,7 @@
       <file leaf-file-name="Command.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/anBase/Command.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="30" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0">
+            <state line="36" column="36" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,13 +141,16 @@
         <option value="$PROJECT_DIR$/src/anBase/exceptions/UnknownCommandException.java" />
         <option value="$PROJECT_DIR$/src/anBase/StorageInterface.java" />
         <option value="$PROJECT_DIR$/src/anBase/exceptions/CommandExecutionException.java" />
-        <option value="$PROJECT_DIR$/src/anBase/CommandExecutor.java" />
-        <option value="$PROJECT_DIR$/src/anBase/Command.java" />
         <option value="$PROJECT_DIR$/src/anBase/Storage.java" />
-        <option value="$PROJECT_DIR$/src/anBase/HashStorage.java" />
-        <option value="$PROJECT_DIR$/src/anBase/ConsoleClient.java" />
-        <option value="$PROJECT_DIR$/src/anBase/LocalCommandExecutor.java" />
         <option value="$PROJECT_DIR$/src/anBase/httpServer/Server.java" />
+        <option value="$PROJECT_DIR$/src/anBase/Command.java" />
+        <option value="$PROJECT_DIR$/src/anBase/LocalCommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/anBase/CommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/anBase/ConsoleClient.java" />
+        <option value="$PROJECT_DIR$/src/anBase/DistributedBaseCommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/anBase/SlaveStorage.java" />
+        <option value="$PROJECT_DIR$/src/anBase/MasterStorage.java" />
+        <option value="$PROJECT_DIR$/src/anBase/HashStorage.java" />
       </list>
     </option>
   </component>
@@ -183,9 +184,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,6 +266,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Favorites" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,7 +288,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.ConsoleClient">
     <configuration default="false" name="ConsoleClient" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="anBase.ConsoleClient" />
       <option name="VM_PARAMETERS" />
@@ -452,24 +453,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="741" extended-state="4" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20395738" sideWeight="0.6710744" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21308981" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32905295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -531,47 +532,59 @@
         <state line="2" column="57" selection-start="85" selection-end="85" vertical-scroll-proportion="0.06174957" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/CommandExecutor.java">
+    <entry file="file://$PROJECT_DIR$/src/anBase/Storage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="64" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" />
+        <state line="9" column="26" selection-start="187" selection-end="187" vertical-scroll-proportion="0.27226892" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/anBase/LocalCommandExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="92" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0" />
+        <state line="7" column="4" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/HashStorage.java">
+    <entry file="file://$PROJECT_DIR$/src/anBase/DistributedBaseCommandExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" />
+        <state line="8" column="42" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/Storage.java">
+    <entry file="file://$PROJECT_DIR$/src/anBase/CommandExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" />
+        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/anBase/ConsoleClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="65" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/CommandParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="30" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0" />
+        <state line="37" column="1" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/anBase/httpServer/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="1" selection-start="856" selection-end="856" vertical-scroll-proportion="0.8125">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="16" column="13" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/anBase/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="36" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/anBase/SlaveStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="31" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/anBase/MasterStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="41" selection-start="124" selection-end="124" vertical-scroll-proportion="0.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/anBase/HashStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
