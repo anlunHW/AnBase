@@ -8,9 +8,16 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 public class ConsoleClient {
+	public ConsoleClient() {
+		executor = new LocalCommandExecutor();
+	}
+
+	public ConsoleClient(CommandExecutor executor) {
+		this.executor = executor;
+	}
+
 	public void start() throws IOException {
 		System.out.println("Print some commands, and I do smth.\nTo quit - write \"quit\"");
-		CommandExecutor executor = new LocalCommandExecutor();
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		try {
@@ -25,7 +32,6 @@ public class ConsoleClient {
 		} catch (IOException e) {
 			e.printStackTrace();
 
-
 		} finally {
 			reader.close();
 		}
@@ -35,4 +41,6 @@ public class ConsoleClient {
 		ConsoleClient cl = new ConsoleClient();
 		cl.start();
 	}
+
+	private CommandExecutor executor;
 }
