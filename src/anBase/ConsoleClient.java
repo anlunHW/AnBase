@@ -2,10 +2,12 @@ package anBase;
 
 import anBase.exceptions.CommandExecutionException;
 import anBase.exceptions.UnknownCommandException;
+import sun.net.www.http.HttpClient;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.net.URL;
 
 public class ConsoleClient {
 	public ConsoleClient() {
@@ -38,7 +40,9 @@ public class ConsoleClient {
 	}
 
 	public static void main(String[] args) throws IOException {
-		ConsoleClient cl = new ConsoleClient();
+		//ConsoleClient cl = new ConsoleClient();
+		ConsoleClient cl = new ConsoleClient(
+				new HttpClientExecutor(new URL("http://localhost:8888")));
 		cl.start();
 	}
 

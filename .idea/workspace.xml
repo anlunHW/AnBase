@@ -59,10 +59,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HttpClientExecutor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/anBase/HttpClientExecutor.java">
+      <file leaf-file-name="ConsoleClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/anBase/ConsoleClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="31" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+            <state line="40" column="28" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,10 +70,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsoleClient.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/anBase/ConsoleClient.java">
+      <file leaf-file-name="Command.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/anBase/Command.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="32" selection-start="887" selection-end="887" vertical-scroll-proportion="0.9779287">
+            <state line="25" column="43" selection-start="438" selection-end="438" vertical-scroll-proportion="-0.16611296">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpStorageServer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/anBase/HttpStorageServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="44" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/anBase/httpServer/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="77" selection-start="357" selection-end="388" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpClientExecutor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/anBase/HttpClientExecutor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="31" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,9 +137,9 @@
         <option value="$PROJECT_DIR$/src/anBase/Storage.java" />
         <option value="$PROJECT_DIR$/src/anBase/HttpServerStorage.java" />
         <option value="$PROJECT_DIR$/src/anBase/HttpServerStorageHandler.java" />
-        <option value="$PROJECT_DIR$/src/anBase/HttpStorageServer.java" />
         <option value="$PROJECT_DIR$/src/anBase/HttpClientExecutor.java" />
         <option value="$PROJECT_DIR$/src/anBase/ConsoleClient.java" />
+        <option value="$PROJECT_DIR$/src/anBase/HttpStorageServer.java" />
       </list>
     </option>
   </component>
@@ -251,7 +280,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.URLReader">
+  <component name="RunManager" selected="Application.ConsoleClient">
     <configuration default="false" name="ConsoleClient" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="anBase.ConsoleClient" />
       <option name="VM_PARAMETERS" />
@@ -286,6 +315,22 @@
     </configuration>
     <configuration default="false" name="URLReader" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="anBase.httpServer.URLReader" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="AnBase" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HttpStorageServer" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="anBase.HttpStorageServer" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -374,10 +419,11 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.ConsoleClient" />
       <item index="1" class="java.lang.String" itemvalue="Application.Server" />
       <item index="2" class="java.lang.String" itemvalue="Application.URLReader" />
+      <item index="3" class="java.lang.String" itemvalue="Application.HttpStorageServer" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -437,20 +483,20 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928678" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928678" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -517,21 +563,9 @@
         <state line="2" column="31" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0625" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/MasterStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="124" selection-end="124" vertical-scroll-proportion="0.125" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/anBase/HashStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="48" selection-start="1098" selection-end="1098" vertical-scroll-proportion="1.1732419">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/anBase/Storage.java">
@@ -541,23 +575,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/LocalCommandExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="317" selection-end="317" vertical-scroll-proportion="0.4105263">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/anBase/CommandExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="52" selection-end="83" vertical-scroll-proportion="0.089701">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/HttpStorageServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="5" selection-start="510" selection-end="510" vertical-scroll-proportion="0.27504244">
           <folding />
         </state>
       </provider>
@@ -571,12 +591,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/httpServer/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/anBase/MasterStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="29" selection-start="475" selection-end="475" vertical-scroll-proportion="0.38870433">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="4" column="41" selection-start="124" selection-end="124" vertical-scroll-proportion="0.11960133">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -589,12 +607,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/anBase/ConsoleClient.java">
+    <entry file="file://$PROJECT_DIR$/src/anBase/HttpStorageServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="32" selection-start="887" selection-end="887" vertical-scroll-proportion="0.9779287">
+        <state line="11" column="44" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/anBase/httpServer/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="77" selection-start="357" selection-end="388" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/anBase/LocalCommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="12" selection-start="317" selection-end="317" vertical-scroll-proportion="0.4105263">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/anBase/ConsoleClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="28" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/anBase/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="43" selection-start="438" selection-end="438" vertical-scroll-proportion="-0.16611296">
+          <folding />
         </state>
       </provider>
     </entry>

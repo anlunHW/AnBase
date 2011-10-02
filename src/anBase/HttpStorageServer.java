@@ -9,6 +9,11 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 public class HttpStorageServer {
+	public static void main(String[] args) {
+		System.out.println("Test http server");
+		startNewServer(new LocalCommandExecutor(), new InetSocketAddress(8888), 10);
+	}
+
 	public static void startNewServer(CommandExecutor executor,
 	                          InetSocketAddress socketAddress, int backlog) {
 		HttpStorageServer server = new HttpStorageServer(executor, socketAddress, backlog);
