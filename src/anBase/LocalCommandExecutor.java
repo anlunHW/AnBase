@@ -1,10 +1,15 @@
 package anBase;
 
 import anBase.exceptions.CommandExecutionException;
+import anBase.exceptions.FromFileBaseRestoringException;
 
 public class LocalCommandExecutor implements CommandExecutor {
 	public LocalCommandExecutor() {
 		baseStorage = new HashStorage();
+	}
+
+	public LocalCommandExecutor(String storeBasePath) {
+		baseStorage = new HashStorage(storeBasePath);
 	}
 
 	public String execute(String cmdStr) {
@@ -36,8 +41,12 @@ public class LocalCommandExecutor implements CommandExecutor {
 			}
 
 			case RESTORE_FROM_DISK: {
-				baseStorage.restoreFromDisk();
-				return "Base has been restored from disk.";
+				try {
+					baseStorage.restoreFromDisk();
+					return "Base has been restored from disk.";
+				} catch (FromFileBaseRestoringException e) {
+					return "Problem with base restoring: " + e.getMessage();
+				}
 			}
 
 			case UNKNOWN_CMD: {

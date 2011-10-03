@@ -1,18 +1,31 @@
 package anBase;
 
+import anBase.exceptions.FromFileBaseRestoringException;
+
+import java.io.*;
 import java.lang.String;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class HashStorage implements Storage {
 	public HashStorage() {
 		map = new HashMap<String, String>();
-		diskSavePath = new String();
+		diskSavePath = "storage";
+		initLog("logfile");
 	}
 
-	public  HashStorage(String diskSavePath) {
+	public HashStorage(String diskSavePath) {
+		map = new HashMap<String, String>();
 		this.diskSavePath = diskSavePath;
+		initLog("logfile");
+	}
+
+	public HashStorage(String diskSavePath, String logPath) {
+		map = new HashMap<String, String>();
+		this.diskSavePath = diskSavePath;
+		initLog(logPath);
 	}
 
 	public String get(String key) {
@@ -23,32 +36,170 @@ public class HashStorage implements Storage {
 		return map.containsKey(key);
 	}
 
-	public void set(String key, String value) {
-		map.put(key, value);
+	public String set(String key, String value) {
+		return map.put(key, value);
 	}
 
-	public void remove(String key) {
-		map.remove(key);
+	public String remove(String key) {
+		return map.remove(key);
 	}
 
 	public void storeToDisk() {
 		storeToDisk(diskSavePath);
-		return;
 	}
 
 	public void storeToDisk(String path) {
-		return;
+		BufferedWriter out = null;
+		try {
+			out = new BufferedWriter(new FileWriter(path));
+			for (Map.Entry<String, String> curEntry: map.entrySet()) {
+				out.write("@@@@@\n");
+				out.write(curEntry.getKey());
+				out.newLine();
+				out.write("#####\n");
+				out.write(curEntry.getValue());
+				out.newLine();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		} finally {
+			try {
+				if (out != null)
+					out.close();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
-	public void restoreFromDisk() {
+	public void restoreFromDisk() throws FromFileBaseRestoringException {
 		restoreFromDisk(diskSavePath);
-		return;
 	}
 
-	public void restoreFromDisk(String path) {
-		return;
+	public void restoreFromDisk(String path) throws FromFileBaseRestoringException {
+		BufferedReader in = null;
+		map.clear();
+
+		try {
+			in = new BufferedReader(new FileReader(path));
+			String curLine;
+
+			ReadingState state = ReadingState.AROUND_TEXT;
+			StringBuilder curKey = new StringBuilder();
+			StringBuilder curValue = new StringBuilder();
+			while ((curLine = in.readLine()) != null) {
+				if (curLine.equals("@@@@@")) {
+					if (state == ReadingState.VALUE) {
+						map.put(curKey.toString(), curValue.toString());
+						curKey = new StringBuilder(); //clearing
+						curValue = new StringBuilder(); //clearing
+					}
+
+					state = ReadingState.KEY;
+					continue;
+				}
+
+				if (curLine.equals("#####"))
+					if (state == ReadingState.KEY) {
+						state = ReadingState.VALUE;
+						continue;
+					} else {
+						throw new FromFileBaseRestoringException("Invalid file");
+					}
+
+				switch (state) {
+					case AROUND_TEXT: {
+						continue;
+					}
+
+					case KEY: {
+						if (curKey.length() > 0)
+							curKey.append("\n");
+						curKey.append(curLine);
+						break;
+					}
+
+					case VALUE: {
+						if (curValue.length() > 0)
+							curValue.append("\n");
+						curValue.append(curLine);
+						curValue.append("\n");
+						break;
+					}
+				}
+			}
+			if (state == ReadingState.VALUE)
+				map.put(curKey.toString(), curValue.toString());
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		} finally {
+			try {
+				if (in != null)
+					in.close();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	private enum ReadingState {
+		AROUND_TEXT, KEY, VALUE
+	}
+
+	private void initLog() {
+		initLog(logPath);
+	}
+
+	private void initLog(String newLogPath) {
+		logPath = newLogPath;
+
+		BufferedWriter log = null;
+		try {
+			log = new BufferedWriter(new FileWriter(logPath));
+			log.write("saved base path:\n");
+			log.write("\"" + diskSavePath + "\"");
+			log.write("@@ COMMAND PATH @@");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		} finally {
+			try {
+				if (log != null)
+					log.close();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	private void log(String newLogLine) {
+		BufferedWriter log = null;
+		try {
+			log = new BufferedWriter(new FileWriter(logPath, true));
+			log.write(newLogLine);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		} finally {
+			try {
+				if (log != null)
+					log.close();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	private HashMap<String, String> map;
 	private String diskSavePath;
+	private String logPath;
 }
