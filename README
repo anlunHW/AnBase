@@ -1,4 +1,4 @@
 СУБД Подкопаева Антона
 Для тестового запуска необходимо запустить HttpStorageServer и ConsoleClient.
-Потом в ConsoleClient можно использовать команды "get __name__", "set __name__ __value__", "restore_from_disk",
-"store_to_disk", "quit". Запросы будут обрабатываться базой данных, связь с которой осуществляется через 8888 сокет.
+Потом в ConsoleClient можно использовать команды "get __name__", "set __name__ __value__", "remove __name__",
+"restore_from_disk", "store_to_disk", "quit". Запросы будут обрабатываться базой данных, связь с которой осуществляется через 8888 сокет.

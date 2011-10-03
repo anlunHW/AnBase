@@ -37,11 +37,17 @@ public class HashStorage implements Storage {
 	}
 
 	public String set(String key, String value) {
+		log("set " + key + " " + value);
 		return map.put(key, value);
 	}
 
 	public String remove(String key) {
-		return map.remove(key);
+		if (map.containsKey(key)) {
+			log("remove " + key);
+			return map.remove(key);
+		}
+
+		return "Value with key \"" + key + "\" hasn't been stored.";
 	}
 
 	public void storeToDisk() {
@@ -60,6 +66,9 @@ public class HashStorage implements Storage {
 				out.write(curEntry.getValue());
 				out.newLine();
 			}
+
+			initLog();
+
 		} catch (IOException e) {
 			e.printStackTrace();
 
@@ -132,6 +141,7 @@ public class HashStorage implements Storage {
 			}
 			if (state == ReadingState.VALUE)
 				map.put(curKey.toString(), curValue.toString());
+			initLog();
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -162,8 +172,8 @@ public class HashStorage implements Storage {
 		try {
 			log = new BufferedWriter(new FileWriter(logPath));
 			log.write("saved base path:\n");
-			log.write("\"" + diskSavePath + "\"");
-			log.write("@@ COMMAND PATH @@");
+			log.write("\"" + diskSavePath + "\"\n");
+			log.write("@@ COMMAND PATH @@\n");
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -184,6 +194,7 @@ public class HashStorage implements Storage {
 		try {
 			log = new BufferedWriter(new FileWriter(logPath, true));
 			log.write(newLogLine);
+			log.newLine();
 
 		} catch (IOException e) {
 			e.printStackTrace();
